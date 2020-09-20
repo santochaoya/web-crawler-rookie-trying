@@ -17,13 +17,13 @@ def create_data_files(project_name, base_url):
 
     # create a waiting list of links for crawling
     # file could store data that we can track when web crawler stocked. 
-    queue = os.path.join(project_name, 'queue.txt')
-    crawled = os.path.join(project_name, 'crawled.txt')
+    queue_file = os.path.join(project_name, 'queue.txt')
+    crawled_file = os.path.join(project_name, 'crawled.txt')
 
-    if not os.path.isfile(queue):
-        write_file(queue, base_url)
-    if not os.path.isfile(crawled):
-        write_file(crawled, '')
+    if not os.path.isfile(queue_file):
+        write_file(queue_file, base_url)
+    if not os.path.isfile(crawled_file):
+        write_file(crawled_file, '')
 
 
 def write_file(path, data):
