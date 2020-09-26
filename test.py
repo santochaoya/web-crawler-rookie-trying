@@ -1,11 +1,10 @@
 from urllib.request import urlopen # connect to pages
 
-response = urlopen('https://www.countdown.co.nz/shopping-made-easy')
+response = urlopen('https://www.countdown.co.nz/')
 
-if tag == 'a':
-    for (attribute, value) in attrs:
-        if attribute == 'href':
-            # convert a relative url to a full url with domain name
-            url = parse.urljoin(self.base_url, value)
+html_string = ''
 
-print(response.read().decode('utf-8'))
+html_string = response.read().decode('utf-8')
+
+
+print(html_string)
